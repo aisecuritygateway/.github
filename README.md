@@ -29,9 +29,7 @@
 
 This is the GitHub organization profile for **OpenSourceAIHub**.
 
-The file at [`profile/README.md`](./profile/README.md) renders on our organization landing page:
-
-**[github.com/opensourceaihub](https://github.com/opensourceaihub)**
+**[OpenSourceAIHub Github Organization Landing page](https://github.com/opensourceaihub)**
 
 For quickstart examples, Postman collection, and documentation, visit the main repo:
 
