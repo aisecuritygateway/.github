@@ -1,6 +1,6 @@
 <p align="center">
-  <a href="https://opensourceaihub.ai">
-    <img alt="OpenSourceAIHub" src="./banner.png" width="600" />
+  <a href="https://aimodelgate.ai">
+    <img alt="AI ModelGate" src="./banner.png" width="600" />
   </a>
 </p>
 
@@ -12,17 +12,17 @@
 </p>
 
 <p align="center">
-  <a href="https://opensourceaihub.ai"><strong>Website</strong></a> ·
-  <a href="https://opensourceaihub.ai/docs"><strong>Docs</strong></a> ·
-  <a href="https://opensourceaihub.ai/docs/openai-compatible-proxy"><strong>API Reference</strong></a> ·
-  <a href="https://opensourceaihub.ai/demo-dashboard"><strong>Product Tour</strong></a> ·
-  <a href="https://opensourceaihub.ai/models"><strong>Model Catalog</strong></a>
+  <a href="https://aimodelgate.ai"><strong>Website</strong></a> ·
+  <a href="https://aimodelgate.ai/docs"><strong>Docs</strong></a> ·
+  <a href="https://aimodelgate.ai/docs/openai-compatible-proxy"><strong>API Reference</strong></a> ·
+  <a href="https://aimodelgate.ai/demo-dashboard"><strong>Product Tour</strong></a> ·
+  <a href="https://aimodelgate.ai/models"><strong>Model Catalog</strong></a>
 </p>
 
 <p align="center">
-  <a href="https://opensourceaihub.ai/login"><img src="https://img.shields.io/badge/Free_Credits-1%2C000%2C000-10b981?style=for-the-badge&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9IndoaXRlIiBzdHJva2Utd2lkdGg9IjIiPjxwYXRoIGQ9Ik0xMiAydjIwbTgtOEg0Ii8+PC9zdmc+" alt="1M Free Credits" /></a>&nbsp;
-  <a href="https://opensourceaihub.ai/docs/openai-compatible-proxy"><img src="https://img.shields.io/badge/OpenAI_SDK-Compatible-blue?style=for-the-badge&logo=openai&logoColor=white" alt="OpenAI Compatible" /></a>&nbsp;
-  <a href="https://opensourceaihub.ai/security"><img src="https://img.shields.io/badge/Architecture-Stateless-8b5cf6?style=for-the-badge&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9IndoaXRlIiBzdHJva2Utd2lkdGg9IjIiPjxyZWN0IHg9IjMiIHk9IjExIiB3aWR0aD0iMTgiIGhlaWdodD0iMTEiIHJ4PSIyIi8+PHBhdGggZD0iTTcgMTFWN2E1IDUgMCAwMTEwIDB2NCIvPjwvc3ZnPg==" alt="Stateless" /></a>
+  <a href="https://aimodelgate.ai/login"><img src="https://img.shields.io/badge/Free_Credits-1%2C000%2C000-10b981?style=for-the-badge&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9IndoaXRlIiBzdHJva2Utd2lkdGg9IjIiPjxwYXRoIGQ9Ik0xMiAydjIwbTgtOEg0Ii8+PC9zdmc+" alt="1M Free Credits" /></a>&nbsp;
+  <a href="https://aimodelgate.ai/docs/openai-compatible-proxy"><img src="https://img.shields.io/badge/OpenAI_SDK-Compatible-blue?style=for-the-badge&logo=openai&logoColor=white" alt="OpenAI Compatible" /></a>&nbsp;
+  <a href="https://aimodelgate.ai/security"><img src="https://img.shields.io/badge/Architecture-Stateless-8b5cf6?style=for-the-badge&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9IndoaXRlIiBzdHJva2Utd2lkdGg9IjIiPjxyZWN0IHg9IjMiIHk9IjExIiB3aWR0aD0iMTgiIGhlaWdodD0iMTEiIHJ4PSIyIi8+PHBhdGggZD0iTTcgMTFWN2E1IDUgMCAwMTEwIDB2NCIvPjwvc3ZnPg==" alt="Stateless" /></a>
 </p>
 
 ---
@@ -30,7 +30,7 @@
 ## How It Works
 
 ```
-Your App  ──▶  OpenSourceAIHub  ──▶  LLM Provider
+Your App  ──▶  AI ModelGate  ──▶  LLM Provider
                (AI Firewall)
                ├─ PII Scan (28+ entities + OCR)
                ├─ Prompt Injection Detection
@@ -38,7 +38,7 @@ Your App  ──▶  OpenSourceAIHub  ──▶  LLM Provider
                └─ Smart Cost Routing
 ```
 
-The Hub is an **OpenAI-compatible proxy**. If your app uses the OpenAI SDK, integration is a **two-line change** — swap the `baseURL` and `apiKey`:
+ModelGate is an **OpenAI-compatible proxy**. If your app uses the OpenAI SDK, integration is a **two-line change** — swap the `baseURL` and `apiKey`:
 
 ## Quickstart
 
@@ -49,7 +49,7 @@ import OpenAI from "openai";
 
 const client = new OpenAI({
   apiKey:  "os_hub_your_key_here",                    // ← Hub API key
-  baseURL: "https://api.opensourceaihub.ai/v1",       // ← Hub endpoint
+  baseURL: "https://api.aimodelgate.ai/v1",       // ← Hub endpoint
 });
 
 const res = await client.chat.completions.create({
@@ -67,7 +67,7 @@ from openai import OpenAI
 
 client = OpenAI(
     api_key="os_hub_your_key_here",                    # ← Hub API key
-    base_url="https://api.opensourceaihub.ai/v1",      # ← Hub endpoint
+    base_url="https://api.aimodelgate.ai/v1",      # ← Hub endpoint
 )
 
 res = client.chat.completions.create(
@@ -94,7 +94,7 @@ import (
 func main() {
 	client := openai.NewClient(
 		option.WithAPIKey("os_hub_your_key_here"),                // ← Hub API key
-		option.WithBaseURL("https://api.opensourceaihub.ai/v1"), // ← Hub endpoint
+		option.WithBaseURL("https://api.aimodelgate.ai/v1"), // ← Hub endpoint
 	)
 
 	completion, _ := client.Chat.Completions.New(context.TODO(), openai.ChatCompletionNewParams{
@@ -111,7 +111,7 @@ func main() {
 ### cURL
 
 ```bash
-curl -X POST https://api.opensourceaihub.ai/v1/chat/completions \
+curl -X POST https://api.aimodelgate.ai/v1/chat/completions \
   -H "Authorization: Bearer os_hub_your_key_here" \
   -H "Content-Type: application/json" \
   -d '{
@@ -121,11 +121,11 @@ curl -X POST https://api.opensourceaihub.ai/v1/chat/completions \
   }'
 ```
 
-> **Model names:** Use `oah/` prefixed virtual models for smart cost-routing, or explicit provider models like `groq/llama-3.3-70b-versatile`. See the [full model catalog](https://opensourceaihub.ai/models).
+> **Model names:** Use `oah/` prefixed virtual models for smart cost-routing, or explicit provider models like `groq/llama-3.3-70b-versatile`. See the [full model catalog](https://aimodelgate.ai/models).
 
 ---
 
-## What the Hub Protects
+## What ModelGate Protects
 
 | Layer | What It Does |
 |-------|-------------|
@@ -155,16 +155,16 @@ Route to **100+ models** across **9 providers** with one API key:
 
 | Repository | Description |
 |-----------|-------------|
-| [**quickstart-ts**](https://github.com/opensourceaihub/opensourceaihub/tree/main/opensourceaihub-quickstart-ts) | TypeScript / Node.js quickstart — clone, `npm install`, run |
-| [**quickstart-python**](https://github.com/opensourceaihub/opensourceaihub/tree/main/opensourceaihub-quickstart-python) | Python quickstart — clone, `pip install`, run |
-| [**quickstart-go**](https://github.com/opensourceaihub/opensourceaihub/tree/main/opensourceaihub-quickstart-go) | Go quickstart — clone, `go run`, done |
-| [**postman**](https://github.com/opensourceaihub/opensourceaihub/tree/main/opensourceaihub-postman) | Postman collection + environment for the full API |
+| [**quickstart-ts**](https://github.com/aimodelgate/aimodelgate/tree/main/aimodelgate-quickstart-ts) | TypeScript / Node.js quickstart — clone, `npm install`, run |
+| [**quickstart-python**](https://github.com/aimodelgate/aimodelgate/tree/main/aimodelgate-quickstart-python) | Python quickstart — clone, `pip install`, run |
+| [**quickstart-go**](https://github.com/aimodelgate/aimodelgate/tree/main/aimodelgate-quickstart-go) | Go quickstart — clone, `go run`, done |
+| [**postman**](https://github.com/aimodelgate/aimodelgate/tree/main/aimodelgate-postman) | Postman collection + environment for the full API |
 
 ## Pricing
 
 | Plan | What You Get |
 |------|-------------|
-| **Free** | 1,000,000 Hub Credits on signup. Full DLP protection. All features. |
+| **Free** | 1,000,000 ModelGate Credits on signup. Full DLP protection. All features. |
 | **Managed Credits** | Pay-as-you-go. Add credits to your wallet. We handle provider accounts. |
 | **Pro (BYOK)** | $29/month. Bring your own provider API keys. Zero markup on LLM costs. |
 
@@ -173,18 +173,18 @@ Route to **100+ models** across **9 providers** with one API key:
 ---
 
 <p align="center">
-  <a href="https://opensourceaihub.ai/login"><strong>Get Started — 1M Free Credits →</strong></a>
+  <a href="https://aimodelgate.ai/login"><strong>Get Started — 1M Free Credits →</strong></a>
 </p>
 
 <p align="center">
   <sub>
-    <a href="https://opensourceaihub.ai/security">Security</a> ·
-    <a href="https://opensourceaihub.ai/privacy">Privacy Policy</a> ·
-    <a href="https://opensourceaihub.ai/tos">Terms of Service</a> ·
-    <a href="mailto:support@opensourceaihub.ai">Contact</a>
+    <a href="https://aimodelgate.ai/security">Security</a> ·
+    <a href="https://aimodelgate.ai/privacy">Privacy Policy</a> ·
+    <a href="https://aimodelgate.ai/tos">Terms of Service</a> ·
+    <a href="mailto:support@aimodelgate.ai">Contact</a>
   </sub>
 </p>
 
 <p align="center">
-  <sub>Built by <a href="https://opensourceaihub.ai">Datum Fuse LLC</a> · Stateless Architecture · No Data Retention · AES-256 Encryption</sub>
+  <sub>Built by <a href="https://aimodelgate.ai">Datum Fuse LLC</a> · Stateless Architecture · No Data Retention · AES-256 Encryption</sub>
 </p>
