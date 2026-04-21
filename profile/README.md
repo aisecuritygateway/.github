@@ -109,18 +109,24 @@ The gateway redacts the email and SSN before forwarding. The response includes `
 
 ## OSS vs Managed Cloud
 
-|  | OSS | [Cloud](https://aisecuritygateway.ai) |
+This repo gives you the core AI security proxy. The managed [AI Security Gateway Cloud](https://aisecuritygateway.ai) adds everything you need to run it across teams at scale.
+
+|  | OSS (this repo) | [Cloud](https://aisecuritygateway.ai) |
 |---|:---:|:---:|
 | PII detection & redaction (text) | 13 entity types | 28+ entity types |
 | OCR image scanning | — | Yes |
-| Secret leak prevention | 6 recognizers | Extended |
-| Prompt injection blocking | 5 core patterns | Extended library |
+| Secret leak prevention | 6 recognizers | Extended (incl. AWS Secret Key, crypto, MAC) |
+| Prompt injection blocking | 5 core patterns | Extended pattern library |
 | Multi-provider routing (BYOK) | 2 providers | 8+ providers |
-| Smart cost-optimization routing | — | Yes |
-| Dashboards & analytics | — | Yes |
+| Self-hosted | Yes | Managed |
 | Multi-project management | — | Yes |
-| Automatic failover chains | — | Yes |
+| Project-level DLP policies & budgets | — | Yes |
+| Dashboards, leak reports & analytics | — | Yes |
 | SLA & support | Community | Yes |
+| Auto cost-optimization across 8 providers | — | Yes |
+| Real-time model pricing registry | — | Yes |
+| Managed provider keys (no BYOK required) | — | Yes |
+| Automatic failover chains | — | Yes |
 
 > **Skip the setup?** The managed version at [aisecuritygateway.ai](https://aisecuritygateway.ai) gives you everything here plus dashboards, multi-project policies, and 8 providers — no Docker required.
 
