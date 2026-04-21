@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="https://aisecuritygateway.ai">
+  <a href="https://github.com/aisecuritygateway/aisecuritygateway">
     <img alt="AI Security Gateway" src="https://aisecuritygateway.ai/og.jpg" width="600" />
   </a>
 </p>
@@ -26,27 +26,40 @@
 
 ---
 
-## What Is AISG?
-
-AISG (AI Security Gateway) is an **OpenAI-compatible proxy** that acts as an AI firewall. It sits between your app and LLM providers, scanning every request for PII, secrets, and prompt injection attacks before anything reaches the model.
+## How It Works
 
 ```
-Your App  ──▸  AISG Gateway  ──▸  Presidio (PII scan)  ──▸  LLM Provider
-                    │                                            │
-                    │◂── redacted or blocked ──────────────────▸│
-                    │◂── clean response ────────────────────────│
+                           ┌─────────────────────────────┐
+                           │        AISG Gateway          │
+    ┌──────────┐           │                              │           ┌──────────────┐
+    │          │  POST     │  1. Auth (API key)           │           │              │
+    │ Your App ├──────────▸│  2. Resolve provider/model   │──────────▸│ LLM Provider │
+    │          │           │  3. DLP scan (Presidio)      │           │ (Groq/OpenAI)│
+    │          │◂──────────│  4. Block or redact           │◂──────────│              │
+    └──────────┘  response │  5. Forward to upstream      │  response └──────────────┘
+                           │  6. Return with metadata     │
+                           │                              │
+                           │         ┌──────────┐         │
+                           │         │ Presidio │         │
+                           │         │ (PII/NER)│         │
+                           │         └──────────┘         │
+                           └─────────────────────────────┘
 ```
 
-## Key Features
+AISG is an **OpenAI-compatible proxy** that acts as an AI firewall. It sits between your app and LLM providers, scanning every request for PII, secrets, and prompt injection attacks before anything reaches the model.
+
+### Key Features
 
 - **PII Redaction** — emails, phone numbers, credit cards, SSNs, names, locations, IP addresses
 - **Secret Detection** — API keys, AWS credentials, GitHub tokens, private keys, Slack webhooks
 - **Prompt Injection Blocking** — detects jailbreak and instruction override attempts
 - **Multi-Provider Routing** — OpenAI-compatible API, BYOK, swap providers in config
-- **Fail-Closed Security** — if the safety layer is down, requests are blocked, never forwarded unscanned
+- **Fail-Closed Security** — if the safety layer is down, requests are **blocked**, never forwarded unscanned
 - **Zero Cloud Dependencies** — runs entirely on your machine via Docker
 
-## Quickstart
+---
+
+## Quickstart (60 seconds)
 
 ```bash
 git clone https://github.com/aisecuritygateway/aisecuritygateway.git
@@ -67,9 +80,36 @@ curl http://localhost:8000/v1/chat/completions \
 
 The gateway redacts the email and SSN before forwarding. The response includes `aisg_metadata.pii_detected: true`.
 
+---
+
+## What Gets Detected
+
+| PII (Presidio built-ins) | Developer Secrets (custom) | Prompt Injection |
+|---|---|---|
+| `EMAIL_ADDRESS` | `API_KEY` (OpenAI, Anthropic, GCP) | Ignore previous instructions |
+| `PHONE_NUMBER` | `AWS_ACCESS_KEY` | Disregard your rules |
+| `CREDIT_CARD` | `PRIVATE_KEY` (RSA, EC, etc.) | System prompt extraction |
+| `US_SSN` | `GITHUB_TOKEN` (PAT, OAuth) | DAN / jailbreak attempts |
+| `PERSON`, `LOCATION` | `SLACK_WEBHOOK` | Developer mode exploits |
+| `IP_ADDRESS` | | |
+
+**13 entity types** out of the box — the [managed cloud](https://aisecuritygateway.ai) extends this to **28+** with OCR image scanning.
+
+---
+
+## Security Model
+
+- **Fail-closed by default** — if Presidio is unreachable, requests are **blocked**, never forwarded unscanned
+- **Auth by default** — API key authentication enabled out of the box
+- **No telemetry** — zero external calls, no analytics, no phone-home
+- **Secret scrubbing** — structured logs automatically mask API keys and tokens
+- **Rate limiting** — token bucket per API key (default 10 req/sec)
+
+---
+
 ## OSS vs Managed Cloud
 
-|  | OSS (this repo) | [Cloud](https://aisecuritygateway.ai) |
+|  | OSS | [Cloud](https://aisecuritygateway.ai) |
 |---|:---:|:---:|
 | PII detection & redaction (text) | 13 entity types | 28+ entity types |
 | OCR image scanning | — | Yes |
@@ -79,6 +119,10 @@ The gateway redacts the email and SSN before forwarding. The response includes `
 | Smart cost-optimization routing | — | Yes |
 | Dashboards & analytics | — | Yes |
 | Multi-project management | — | Yes |
+| Automatic failover chains | — | Yes |
+| SLA & support | Community | Yes |
+
+> **Skip the setup?** The managed version at [aisecuritygateway.ai](https://aisecuritygateway.ai) gives you everything here plus dashboards, multi-project policies, and 8 providers — no Docker required.
 
 ---
 
