@@ -115,7 +115,7 @@ This repo gives you the core AI security proxy. The managed [AI Security Gateway
 |---|:---:|:---:|
 | PII detection & redaction (text) | 13 entity types | 28+ entity types |
 | OCR image scanning | — | Yes |
-| Secret leak prevention | 6 recognizers | Extended (incl. AWS Secret Key, crypto, MAC) |
+| Secret leak prevention | 5 recognizers | Extended (incl. AWS Secret Key, crypto, MAC) |
 | Prompt injection blocking | 5 core patterns | Extended pattern library |
 | Multi-provider routing (BYOK) | 2 providers | 8+ providers |
 | Self-hosted | Yes | Managed |
