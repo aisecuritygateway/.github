@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://github.com/aisecuritygateway/aisecuritygateway">
-    <img alt="AI Security Gateway" src="https://aisecuritygateway.ai/og.jpg" width="600" />
+    <img alt="AI Security Gateway" src="https://aisecuritygateway.ai/og.png" width="600" />
   </a>
 </p>
 
