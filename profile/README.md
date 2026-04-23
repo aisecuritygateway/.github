@@ -117,16 +117,17 @@ This repo gives you the core AI security proxy. The managed [AI Security Gateway
 | OCR image scanning | — | Yes |
 | Secret leak prevention | 5 recognizers | Extended (incl. AWS Secret Key, crypto, MAC) |
 | Prompt injection blocking | 5 core patterns | Extended pattern library |
-| Multi-provider routing (BYOK) | 2 providers | 8+ providers |
+| Routing | Header-based (`x-provider`) | Smart Router + real-time pricing |
+| Failover | — | Automatic intelligent chains |
+| Cost optimization | — | Automatic (cheapest per request) |
+| Budget enforcement | — | Per-project caps + alerts + analytics |
 | Self-hosted | Yes | Managed |
 | Multi-project management | — | Yes |
-| Project-level DLP policies & budgets | — | Yes |
+| Project-level DLP policies | — | Yes |
 | Dashboards, leak reports & analytics | — | Yes |
-| SLA & support | Community | Yes |
-| Auto cost-optimization across 8 providers | — | Yes |
 | Real-time model pricing registry | — | Yes |
 | Managed provider keys (no BYOK required) | — | Yes |
-| Automatic failover chains | — | Yes |
+| SLA & support | Community | Yes |
 
 > **Skip the setup?** The managed version at [aisecuritygateway.ai](https://aisecuritygateway.ai) gives you everything here plus dashboards, multi-project policies, and 8 providers — no Docker required.
 
